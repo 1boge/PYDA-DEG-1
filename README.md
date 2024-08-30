@@ -1,1 +1,1 @@
-### Python in Netology homeworks
+### Python homeworks in Netology
