@@ -161,9 +161,16 @@ stream = [
 '2018-05-03,user4,9',
 '2018-05-11,user4,11',
 ]
+stream1 = [
+'2018-01-01,user100,150',
+'2018-01-07,user99,205',
+'2018-03-29,user1001,81'
+]
+unique_items = []
 total_entries = 0
-for enters in stream:
+for enters in stream1:
     visits = enters.split(',')
     total_entries += int(visits[2])
-    print(visits[1])
-print(total_entries)
+    if visits[1] not in unique_items:
+        unique_items.append(visits[1])
+print('Среднее количество просмотров на одного пользователя:', "{:.2f}".format(total_entries / len(unique_items)))
